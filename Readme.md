@@ -11,7 +11,7 @@ Using the `NumberedPagination`, you will get something like `< 1 2 ... 21 22 23 
 
 ## Installation
 
-Install the extension with `composer require georgringer/numbered_pagination` or by downloading it
+Install the extension with `composer require georgringer/numbered-pagination` or by downloading it
 from [extensions.typo3.org](https://extensions.typo3.org/extension/numbered_pagination/) or the Extension Manager.
 
 ## Usage
