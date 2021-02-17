@@ -20,9 +20,11 @@ Just replace the usage of `SimplePagination` with `\GeorgRinger\NumberedPaginati
 Set the 2nd argument to the maximum number of links which should be rendered.
 
 ```php
+$itemsPerPage = 10;
+$maximumLinks = 15;
 $currentPage = $this->request->hasArgument('currentPage') ? (int)$this->request->getArgument('currentPage') : 1;
-$paginator = new \TYPO3\CMS\Extbase\Pagination\QueryResultPaginator($allItems, $currentPage, 20);
-$pagination = new \GeorgRinger\NumberedPagination\NumberedPagination($paginator, 10);
+$paginator = new \TYPO3\CMS\Extbase\Pagination\QueryResultPaginator($allItems, $currentPage, $itemsPerPage);
+$pagination = new \GeorgRinger\NumberedPagination\NumberedPagination($paginator, $maximumLinks);
 $this->view->assign('pagination', [
     'paginator' => $paginator,
     'pagination' => $pagination,
@@ -33,7 +35,7 @@ $this->view->assign('pagination', [
 
 ```html
 <f:for each="{pagination.paginator.paginatedItems}" as="item" iteration="iterator">
-    <f:render partial="item" arguments="{item:item}"/>
+    <f:render partial="Item" arguments="{item:item}" />
 </f:for>
 <f:render partial="Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
 ```
