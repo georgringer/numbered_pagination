@@ -2,9 +2,7 @@
 
 declare(strict_types=1);
 
-
 namespace GeorgRinger\NumberedPagination;
-
 
 use TYPO3\CMS\Core\Pagination\PaginationInterface;
 use TYPO3\CMS\Core\Pagination\PaginatorInterface;
