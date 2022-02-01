@@ -1,7 +1,7 @@
 {
 	"name": "georgringer/numbered-pagination",
 	"type": "typo3-cms-extension",
-	"description": "Improved pagination for TYPO3 10+",
+	"description": "Improved pagination for TYPO3",
 	"keywords": [
 		"TYPO3",
 		"pagination"
@@ -15,7 +15,7 @@
 	],
 	"license": "GPL-2.0-or-later",
 	"require": {
-		"typo3/cms-core": "^10 || ^11",
+		"typo3/cms-core": "^9 || ^10 || ^11",
 		"php": ">=7.3"
 	},
 	"extra": {
@@ -26,11 +26,6 @@
 	"autoload": {
 		"psr-4": {
 			"GeorgRinger\\NumberedPagination\\": "Classes"
-		}
-	},
-	"autoload-dev": {
-		"psr-4": {
-			"GeorgRinger\\NumberedPagination\\Tests\\": "Tests"
 		}
 	},
 	"replace": {
