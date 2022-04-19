@@ -16,7 +16,7 @@ from [extensions.typo3.org](https://extensions.typo3.org/extension/numbered_pagi
 
 ## Usage
 
-Just replace the usage of `SimplePagination` with `\GeorgRinger\NumberedPagination\Pagination\NumberedPagination` and you are done.
+Just replace the usage of `SimplePagination` with `\GeorgRinger\NumberedPagination\NumberedPagination` and you are done.
 Set the 2nd argument to the maximum number of links which should be rendered.
 
 ```php
