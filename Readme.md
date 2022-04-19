@@ -37,7 +37,7 @@ $this->view->assign('pagination', [
 <f:for each="{pagination.paginator.paginatedItems}" as="item" iteration="iterator">
     <f:render partial="Item" arguments="{item:item}" />
 </f:for>
-<f:render partial="Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
+<f:render partial="Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator, actionName: 'listXYZ'}" />
 ```
 
 Copy the pagination partial `EXT:numbered_pagination/Resources/Private/Partials/Pagination.html` to your extension or use it directly by providing the path mapping:
