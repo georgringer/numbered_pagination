@@ -130,9 +130,9 @@ final class NumberedPagination implements PaginationInterface
         if ($maximumNumberOfLinks > $numberOfPages) {
             $maximumNumberOfLinks = $numberOfPages;
         }
-        $delta = floor($maximumNumberOfLinks / 2);
-        $this->displayRangeStart = (int)($currentPage - $delta);
-        $this->displayRangeEnd = (int)($currentPage + $delta - ($maximumNumberOfLinks % 2 === 0 ? 1 : 0));
+        $delta = (int)($maximumNumberOfLinks / 2);
+        $this->displayRangeStart = $currentPage - $delta;
+        $this->displayRangeEnd = $currentPage + $delta - ($maximumNumberOfLinks % 2 === 0 ? 1 : 0);
         if ($this->displayRangeStart < 1) {
             $this->displayRangeEnd -= $this->displayRangeStart - 1;
         }
@@ -145,9 +145,6 @@ final class NumberedPagination implements PaginationInterface
         $this->hasMorePages = $this->displayRangeEnd + 1 < $this->paginator->getNumberOfPages();
     }
 
-    /**
-     * @return PaginatorInterface
-     */
     public function getPaginator(): PaginatorInterface
     {
         return $this->paginator;
