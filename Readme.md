@@ -1,7 +1,7 @@
 # TYPO3 Extension `numbered_pagination`
 
 Since TYPO3 10 a new pagination API is shipped which supersedes the pagination widget controller which is removed in version 11.0.
-[Official documentation](https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/ApiOverview/Pagination/Index.html)
+[Official documentation](https://docs.typo3.org/m/typo3/reference-coreapi/main/en-us/ApiOverview/Pagination/Index.html)
 
 This extension provides an improved pagination which can be used to paginate array items or query results from Extbase.
 The main advantage is that it reduces the amount of pages shown.
