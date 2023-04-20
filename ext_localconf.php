@@ -1,6 +1,6 @@
 <?php
 
-defined('TYPO3_MODE') or die();
+defined('TYPO3') or die();
 
 if (!interface_exists('TYPO3\CMS\Core\Pagination\PaginationInterface', false)) {
     class_alias(
