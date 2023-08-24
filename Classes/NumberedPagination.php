@@ -141,7 +141,7 @@ final class NumberedPagination implements PaginationInterface
         }
         $this->displayRangeStart = (integer)max($this->displayRangeStart, 1);
         $this->displayRangeEnd = (integer)min($this->displayRangeEnd, $numberOfPages);
-        $this->hasLessPages = $this->displayRangeStart > 1;
+        $this->hasLessPages = $this->displayRangeStart > 2;
         $this->hasMorePages = $this->displayRangeEnd + 1 < $this->paginator->getNumberOfPages();
     }
 
