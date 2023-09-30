@@ -1,5 +1,5 @@
 <ul class="f3-widget-paginator">
-    <f:if condition="{pagination.previousPageNumber} && {pagination.previousPageNumber} >= {pagination.firstPageNumber}">
+    <f:if condition="{pagination.previousPageNumber} && {pagination.previousPageNumber} > {pagination.firstPageNumber}">
         <f:then>
             <f:comment>
                 <li class="first">
@@ -32,7 +32,7 @@
     <f:if condition="{pagination.hasMorePages}">
         <li>…</li>
     </f:if>
-    <f:if condition="{pagination.nextPageNumber} && {pagination.nextPageNumber} <= {pagination.lastPageNumber}">
+    <f:if condition="{pagination.nextPageNumber} && {pagination.nextPageNumber} < {pagination.lastPageNumber}">
         <f:then>
             <li class="next">
                 <a href="{f:uri.action(action:actionName, arguments:{currentPage: pagination.nextPageNumber})}" title="{f:translate(key:'pagination.next')}">
