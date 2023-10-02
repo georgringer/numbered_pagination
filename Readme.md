@@ -47,3 +47,42 @@ Copy the pagination partial `EXT:numbered_pagination/Resources/Private/Partials/
 plugin.tx_fo.view.partialRootPaths.4483 = EXT:numbered_pagination/Resources/Private/Partials/
 ```
 
+The default paginator looks like this:
+
+* [1] 2 3 … next
+* 1 [2] 3 … next
+* prev … 2 [3] 4 … next
+* prev … 3 [4] 5
+* prev … 3 4 [5]
+
+Here's three how-to's on how to achieve different, still common paginators:
+
+#### Scenario 1
+
+By uncommenting `li.first` and `li.last` and commenting out `li.prev` and `li.next` it looks like this:
+
+* [1] 2 3 … last
+* 1 [2] 3 … last
+* first 2 [3] 4 last
+* first … 3 [4] 5
+* first … 3 4 [5]
+
+#### Scenario 1 (alternative)
+
+By **additionally** changing their text to `1` and `{pagination.lastPageNumber}` it looks like this:
+
+* [1] 2 3 … 5
+* 1 [2] 3 … 5
+* 1 2 [3] 4 5
+* 1 … 3 [4] 5
+* 1 … 3 4 [5]
+
+#### Scenario 3
+
+By uncommenting `li.first` and `li.last` (and renaming them to `|<` and `>|`) and flipping their position with `li.prev` and `li.next` (and renaming them to `<` and `>`) it looks like this:
+
+* [1] 2 3 … > >|
+* 1 [2] 3 … > >|
+* |< < … 2 [3] 4 … > >|
+* |< < … 3 [4] 5
+* |< < … 3 4 [5]
