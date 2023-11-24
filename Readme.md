@@ -86,3 +86,19 @@ By uncommenting `li.first` and `li.last` (and renaming them to `|<` and `>|`) an
 * |< < … 2 [3] 4 … > >|
 * |< < … 3 [4] 5
 * |< < … 3 4 [5]
+
+#### Remark on 'dots'
+
+In case the two properties `{pagination.hasLessPages}` and `{pagination.hasMorePages}` don't exactly suit the scenario you're trying to set up, think about doing your own calculations. Here's an example:
+
+```xml
+<!-- instead of {pagination.hasLessPages} which is 'displayRangeStart > 1' internally -->
+<f:if condition="{pagination.displayRangeStart} > 2">
+    <li>…</li>
+</f:if>
+
+<!-- instead of {pagination.hasMorePages} which is 'displayRangeEnd < lastPageNumber' internally -->
+<f:if condition="{pagination.displayRangeEnd + 1} < {pagination.lastPageNumber}">
+    <li>…</li>
+</f:if>
+```
