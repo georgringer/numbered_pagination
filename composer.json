@@ -15,7 +15,7 @@
 	],
 	"license": "GPL-2.0-or-later",
 	"require": {
-		"typo3/cms-core": "^9 || ^10 || ^11 || ^12",
+		"typo3/cms-core": "^9 || ^10 || ^11 || ^12 || ^13",
 		"php": ">=7.3"
 	},
 	"extra": {
