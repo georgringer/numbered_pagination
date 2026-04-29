@@ -18,6 +18,9 @@
 		"typo3/cms-core": "^9 || ^10 || ^11 || ^12 || ^13 || ^14",
 		"php": ">=7.3"
 	},
+	"require-dev": {
+		"phpunit/phpunit": "^10 || ^11"
+	},
 	"extra": {
 		"typo3/cms": {
 			"extension-key": "numbered_pagination"
@@ -26,6 +29,11 @@
 	"autoload": {
 		"psr-4": {
 			"GeorgRinger\\NumberedPagination\\": "Classes"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"GeorgRinger\\NumberedPagination\\Tests\\": "Tests"
 		}
 	},
 	"replace": {
