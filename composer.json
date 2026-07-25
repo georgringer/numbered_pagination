@@ -20,7 +20,11 @@
 	},
 	"extra": {
 		"typo3/cms": {
-			"extension-key": "numbered_pagination"
+			"extension-key": "numbered_pagination",
+			"version": "2.2.1-dev",
+			"Package": {
+				"providesPackages": []
+			}
 		}
 	},
 	"autoload": {
